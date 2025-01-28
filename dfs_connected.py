@@ -2,8 +2,6 @@ import sys
 sys.setrecursionlimit(10 ** 6)
 n = int(input())
 
-graph = {}
-
 map = []
 
 for i in range(n):
@@ -12,10 +10,7 @@ for i in range(n):
 
 
 def search(x, y, m):
-    rows = n
-    cols = n
-
-    if x < 0 or x >= rows or y < 0 or y >= cols or m[y][x] == '0':
+    if x < 0 or x >= n or y < 0 or y >= n or m[y][x] == '0':
         return 0
 
 
@@ -39,5 +34,6 @@ for i in range(n):
             num = search(j, i, map)
             ans.append(num)
 final = sorted(ans)
+print(len(final))
 for item in final:
     print(item)
