@@ -15,7 +15,7 @@ for i in range(N-1):
     new_arr = [0]*10
 
     new_arr[0] = arr[1]        
-    new_arr[9] = arr[9]
+    new_arr[9] = arr[8]
     for j in range(1,9):
         new_arr[j] = new_arr[j] + arr[j-1] + arr[j+1]
     #print(new_arr)
